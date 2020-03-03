@@ -9,12 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="stils.css">
+  <link rel="stylesheet" href="\\ri.riga.lv\rv1g\Audzekni\pksilins\My Documents\NetBeansProjects\TestWeb\public_html\css\stils.css">
 </head>
 <body>
 
 
-<nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" id="navbar">
+    
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -29,9 +30,11 @@
         <li><a href="#">&lt;div&gt;</a></li>
         <li><a href="#">&lt;span&gt;</a></li>
         <li><a href="#">&lt;code&gt;</a></li>
+         
       </ul>
     </div>
   </div>
+ 
 </nav>
 
 
@@ -46,11 +49,21 @@ The &lt;div&gt; element is often used as a container for other HTML elements to 
 
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">&lt;span&gt;</h3>
-  <p>The <span> tag is used to group inline-elements in a document.
+  <p>The &lt;span&gt; tag is used to group inline-elements in a document.
 
-The <span> tag provides no visual change by itself.
+The &lt;span&gt; tag provides no visual change by itself.
 
-The <span> tag provides a way to add a hook to a part of a text or a part of a document.
+The &lt;span&gt; tag provides a way to add a hook to a part of a text or a part of a document.
+
+ </p>
+  <a href="#" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>
+</div>
+    
+<div class="container-fluid bg-3 text-center">
+  <h3 class="margin">&lt;code&gt;</h3>
+  <p>The &lt;code&gt; tag is a phrase tag. It defines a piece of computer code.
 
  </p>
   <a href="#" class="btn btn-default btn-lg">
@@ -58,13 +71,12 @@ The <span> tag provides a way to add a hook to a part of a text or a part of a d
   </a>
 </div>
 
-
 <div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">&lt;code&gt;</h3><br>
+  <h3 class="margin">&lt;css&gt;</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>CSS Rounded corners</p>
+      <img src="\ri.riga.lv\rv1g\Audzekni\pksilins\My Documents\NetBeansProjects\TestWeb\public_html\images\css1.PNG" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-4"> 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -81,6 +93,19 @@ The <span> tag provides a way to add a hook to a part of a text or a part of a d
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
+   <script>
+window.onscroll = function() {myFunction()};
 
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>
